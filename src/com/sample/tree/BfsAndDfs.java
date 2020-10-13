@@ -3,28 +3,13 @@ package com.sample.tree;
 public class BfsAndDfs {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode();
-        root.setValue("1");
-        TreeNode left = new TreeNode();
-        left.setValue("2");
-        TreeNode right = new TreeNode();
-        right.setValue("3");
-        root.setLeft(left);
-        root.setRight(right);
-
-        TreeNode leftLeft = new TreeNode();
-        leftLeft.setValue("4");
-        TreeNode leftRight = new TreeNode();
-        leftRight.setValue("5");
-        left.setLeft(leftLeft);
-        left.setRight(leftRight);
-
-        TreeNode rightLeft = new TreeNode();
-        rightLeft.setValue("6");
-        TreeNode rightRight = new TreeNode();
-        rightRight.setValue("7");
-        right.setLeft(rightLeft);
-        right.setRight(rightRight);
+        TreeNode root = new TreeNode("1");
+        root.setLeft(new TreeNode("2"));
+        root.setRight(new TreeNode("3"));
+        root.getLeft().setLeft(new TreeNode("4"));
+        root.getLeft().setRight(new TreeNode("5"));
+        root.getRight().setLeft(new TreeNode("6"));
+        root.getRight().setRight(new TreeNode("7"));
 
         System.out.println("BFS: ");
         root.printBFS();

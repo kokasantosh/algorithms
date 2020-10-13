@@ -9,6 +9,10 @@ public class TreeNode {
     private TreeNode left;
     private TreeNode right;
 
+    public TreeNode(String value) {
+        this.value = value;
+    }
+
     public String getValue() {
         return value;
     }
