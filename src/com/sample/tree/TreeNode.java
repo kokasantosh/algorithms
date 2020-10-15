@@ -5,19 +5,19 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class TreeNode {
-    private String value;
+    private int value;
     private TreeNode left;
     private TreeNode right;
 
-    public TreeNode(String value) {
+    public TreeNode(int value) {
         this.value = value;
     }
 
-    public String getValue() {
+    public int getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(int value) {
         this.value = value;
     }
 

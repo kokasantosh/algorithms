@@ -9,25 +9,25 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class LeftAndRightViewOfTree {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode("1");
-        root.setLeft(new TreeNode("2"));
-        root.setRight(new TreeNode("3"));
-        root.getLeft().setLeft(new TreeNode("4"));
-        root.getLeft().setRight(new TreeNode("5"));
-        root.getRight().setLeft(new TreeNode("6"));
-        root.getRight().setRight(new TreeNode("7"));
+        TreeNode root = new TreeNode(1);
+        root.setLeft(new TreeNode(2));
+        root.setRight(new TreeNode(3));
+        root.getLeft().setLeft(new TreeNode(4));
+        root.getLeft().setRight(new TreeNode(5));
+        root.getRight().setLeft(new TreeNode(6));
+        root.getRight().setRight(new TreeNode(7));
         Stack<TreeNode> stack = new Stack<>();
         stack.add(root);
-        List<String> result = new ArrayList<String>();
+        List<Integer> result = new ArrayList<>();
         leftView(stack, result);
         System.out.println(result);
 
-        result = new ArrayList<String>();
+        result = new ArrayList<>();
         rightView(stack, result);
         System.out.println(result);
     }
 
-    private static void leftView(Stack<TreeNode> stack, List<String> elements) {
+    private static void leftView(Stack<TreeNode> stack, List<Integer> elements) {
         elements.add(stack.firstElement().getValue());
         Stack<TreeNode> childStack = new Stack<>();
         for(TreeNode node: stack) {
@@ -43,7 +43,7 @@ public class LeftAndRightViewOfTree {
         }
     }
 
-    private static void rightView(Stack<TreeNode> stack, List<String> elements) {
+    private static void rightView(Stack<TreeNode> stack, List<Integer> elements) {
         elements.add(stack.peek().getValue());
         Stack<TreeNode> childStack = new Stack<>();
         for(TreeNode node: stack) {
