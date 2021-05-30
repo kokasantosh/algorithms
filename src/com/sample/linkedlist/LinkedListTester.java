@@ -20,14 +20,14 @@ public class LinkedListTester {
         list.insertAtIndex(0, 5);
         list.reverse();
         list.print();
-        System.out.println("Middle element is: " + list.getMiddleElementVal().value);
+        System.out.println("Middle element is: " + list.getMiddleNode().value);
         list.push(6);
-        System.out.println("Middle element is: " + list.getMiddleElementVal().value);
+        System.out.println("Middle element is: " + list.getMiddleNode().value);
 
         LinkedList list1 = new LinkedList();
-        System.out.println("Middle element is: " + list1.getMiddleElementVal());
+        System.out.println("Middle element is: " + list1.getMiddleNode());
         list1.push(1);
-        System.out.println("Middle element is: " + list1.getMiddleElementVal().value);
+        System.out.println("Middle element is: " + list1.getMiddleNode().value);
 
         System.out.println("Loop exists: " + list.isLoopExists());
         System.out.println("Loop1 exists: " + list1.isLoopExists());
@@ -36,6 +36,8 @@ public class LinkedListTester {
         list.print();
         list.pairwiseSwap();
         list.print();
+
+        System.out.println("Size of the linked list is : " + list.size());
     }
 
 }

@@ -91,6 +91,7 @@ public class LinkedList<T> {
             System.out.print(curr.value + " ");
             curr = curr.next;
         }
+        System.out.println("");
     }
 
     public void pairwiseSwap() {
@@ -135,7 +136,7 @@ public class LinkedList<T> {
         head = prev;
     }
 
-    public Node getMiddleElementVal() {
+    public Node getMiddleNode() {
 
         Node slow = head;
         Node fast = head;
