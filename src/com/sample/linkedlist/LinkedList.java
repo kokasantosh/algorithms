@@ -93,6 +93,35 @@ public class LinkedList<T> {
         }
     }
 
+    public void pairwiseSwap() {
+        if(head == null) {
+            return;
+        }
+
+        Node prev = null;
+        Node one = head;
+        Node two = head.next;
+
+        while(one != null && two != null) {
+            if(prev != null) {
+                prev.next = two;
+            } else {
+                head = two;
+            }
+            one.next = two.next;
+            two.next = one;
+
+            prev = one;
+            one = one.next;
+            two = null;
+
+            if(one != null) {
+                two = one.next;
+            }
+
+        }
+    }
+
     public void reverse() {
         Node prev = null;
         Node curr = head;

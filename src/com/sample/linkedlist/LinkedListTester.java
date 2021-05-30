@@ -31,6 +31,11 @@ public class LinkedListTester {
 
         System.out.println("Loop exists: " + list.isLoopExists());
         System.out.println("Loop1 exists: " + list1.isLoopExists());
+        list.print();
+        list.pairwiseSwap();
+        list.print();
+        list.pairwiseSwap();
+        list.print();
     }
 
 }
