@@ -14,17 +14,14 @@ public class LoopIdentifier {
         linkedListNode4.setNext(linkedListNode5);
         linkedListNode5.setNext(linkedListNode6);
         linkedListNode6.setNext(linkedListNode3);
-        boolean isLoop = isLoopExists(linkedListNode1);
-        System.out.println("Is Loop Present: " + isLoop);
+        System.out.println("Is Loop Present: " + isLoopExists(linkedListNode1));
     }
 
     private static boolean isLoopExists(LinkedListNode root) {
-        if (root == null){
-            return false;
-        }
+        boolean isLoop = false;
         LinkedListNode slow = root;
         LinkedListNode fast = root;
-        boolean isLoop = false;
+
         while (fast != null && fast.next() != null) {
             slow = slow.next();
             fast = fast.next().next();

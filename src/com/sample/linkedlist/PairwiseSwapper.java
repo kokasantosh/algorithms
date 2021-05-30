@@ -12,7 +12,7 @@ public class PairwiseSwapper {
         linkedListNode2.setNext(linkedListNode3);
         linkedListNode3.setNext(linkedListNode4);
         linkedListNode4.setNext(linkedListNode5);
-//        linkedListNode5.setNext(linkedListNode6);
+        linkedListNode5.setNext(linkedListNode6);
         LinkedListNode root = pairwiseSwap(linkedListNode1);
         root.print();
     }
