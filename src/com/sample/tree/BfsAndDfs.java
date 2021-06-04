@@ -15,6 +15,9 @@ public class BfsAndDfs {
         root.printBFS();
         System.out.println("DFS: ");
         root.printDFS();
+
+        System.out.println("Print nodes at level: ");
+        root.printNodesAtNthLevel(2);
     }
 
 }

@@ -16,8 +16,8 @@ public class BalancedTree {
 
     private static boolean isBalanced(TreeNode node) {
 
-        if(node == null || TreeNode.getHeight(node.getLeft()) - TreeNode.getHeight(node.getRight()) <= 1
-                && isBalanced(node.getLeft()) && isBalanced(node.getRight())) {
+        if(node == null || (Math.abs(TreeNode.getHeight(node.getLeft()) - TreeNode.getHeight(node.getRight())) <= 1
+                && isBalanced(node.getLeft()) && isBalanced(node.getRight()))) {
             return true;
         }
 
