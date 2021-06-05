@@ -18,6 +18,8 @@ public class KthLargestAndSmallestInBST {
         result = 0;
         findKthSmallestElement(bst.getRoot());
         System.out.println("kth Smallest number is: " + result);
+        currNumber = 2;
+        System.out.println(findKthSmallestElement1(bst.getRoot()));
 
         kthNumber = 2;
         currNumber = 0;
@@ -44,6 +46,29 @@ public class KthLargestAndSmallestInBST {
         findKthSmallestElement(node.getRight());
 
         return;
+    }
+
+    private static int findKthSmallestElement1(TreeNode node){
+
+        if(node == null) {
+            return 0;
+        }
+
+        int leftRes = findKthSmallestElement1(node.getLeft());
+
+        if(leftRes != 0) {
+            return leftRes;
+        }
+
+        currNumber--;
+
+        if(currNumber == 0) {
+            return node.getValue();
+        }
+
+        int rightRes = findKthSmallestElement1(node.getRight());
+
+        return rightRes;
     }
 
     private static void findKthLargestElement(TreeNode node){
