@@ -5,6 +5,7 @@ public class ArrayToBalancedTreeConverter {
         int arr[] = new int[]{1, 2, 3, 4, 5, 6, 7};
         TreeNode root = convertToBalacedTree(arr, 0, arr.length -1);
         root.printBFS();
+        root.printDFS();
     }
 
     private static TreeNode convertToBalacedTree(int[] arr, int start , int end) {
