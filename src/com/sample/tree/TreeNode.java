@@ -39,24 +39,19 @@ public class TreeNode {
     }
 
     public void printBFS() {
-        Queue<TreeNode> queue = new LinkedBlockingQueue();
-        queue.add(this);
-        printBFS(queue);
-    }
+        Queue<TreeNode> queue = new LinkedBlockingQueue<>();
 
-    private void printBFS(Queue<TreeNode> input) {
-        Queue<TreeNode> queue = new LinkedBlockingQueue();
-        for(TreeNode node : input) {
-            System.out.println(node.value);
-            if(node.left != null){
-                queue.add(node.left);
+        queue.add(this);
+
+        while(!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            System.out.print(node.getValue());
+            if(node.getLeft() != null) {
+                queue.add(node.getLeft());
             }
-            if(node.right != null){
-                queue.add(node.right);
+            if(node.getRight() != null) {
+                queue.add(node.getRight());
             }
-        }
-        if(! queue.isEmpty()) {
-            printBFS(queue);
         }
     }
 

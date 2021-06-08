@@ -13,6 +13,7 @@ public class BfsAndDfs {
 
         System.out.println("BFS: ");
         root.printBFS();
+
         System.out.println("DFS: ");
         root.printDFS();
 
